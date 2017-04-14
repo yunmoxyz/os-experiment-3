@@ -1,0 +1,11 @@
+FIFO:
+使用方法：
+命令行输入
+	gcc fifoserver.c -o fifoserver.o
+	gcc fifoclient.c -o fifoclient.o
+在一个终端输入 ./fifoserver.o 运行fifoserver.o
+在另一个终端输入 ./fifoclient.o string(任意字符串) 可在fifoserver.o运行终端获取所输入字符串
+说明：
+	fifoserver.o创建FIFO并对内容进行读取
+	fifoclient.o将字符串写入FIFO
+	必须先运行fifoserver.o 如果先运行fifoclient.o,此时MYFIFO不存在，fopen(FIFO_FILE,"w")会创建一个MYFIFO文件，并不会返回NULL。

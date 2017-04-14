@@ -1,0 +1,7 @@
+shared_memory.c:
+	运行方式：
+	gcc shared_memory.c -o shared_memory.o
+	./shared_memory.o
+	说明：
+	最简单的进程间通信方法之一是使用共享内存。共享内存允许两个或多个进程访问相同的内存，并返回指向同一个实际内存的指针。当一个进程更改内存时，所有其他进程都会看到修改。
+	在本例中输出了两次访问shared memory的内存地址，共享内存块大小和输入的字符串。

@@ -1,0 +1,4 @@
+pipe.c：
+	gcc pipe.c -o pipe.o
+	./pipe.o 
+	父进程把内容写入pipe，子进程从pipe中读取,共写入5个hello world
